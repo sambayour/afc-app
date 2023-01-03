@@ -182,6 +182,7 @@ import { useRouter } from "vue-router";
 import Notification from "./Notification.vue";
 
 const navigation = [
+  { name: "Home", to: { name: "CompanyPublicView" } },
   { name: "Dashboard", to: { name: "Dashboard" } },
   { name: "companies", to: { name: "Companies" } },
 ];
