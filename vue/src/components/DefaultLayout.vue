@@ -42,7 +42,7 @@
                       <div
                         class="text-left text-base font-medium leading-none text-white"
                       >
-                        {{ user.name }}
+                        {{ user.first_name }}
                       </div>
                       <div
                         class="text-sm font-medium leading-none text-gray-400"
