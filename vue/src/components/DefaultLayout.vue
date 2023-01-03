@@ -184,7 +184,7 @@ import Notification from "./Notification.vue";
 const navigation = [
   { name: "Home", to: { name: "CompanyPublicView" } },
   { name: "Dashboard", to: { name: "Dashboard" } },
-  { name: "companies", to: { name: "Companies" } },
+  { name: "Companies", to: { name: "Companies" } },
 ];
 
 export default {
