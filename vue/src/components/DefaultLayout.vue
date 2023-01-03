@@ -42,7 +42,7 @@
                       <div
                         class="text-left text-base font-medium leading-none text-white"
                       >
-                        {{ user.name }}
+                        {{ user.first_name }}
                       </div>
                       <div
                         class="text-sm font-medium leading-none text-gray-400"
@@ -182,8 +182,9 @@ import { useRouter } from "vue-router";
 import Notification from "./Notification.vue";
 
 const navigation = [
+  { name: "Home", to: { name: "CompanyPublicView" } },
   { name: "Dashboard", to: { name: "Dashboard" } },
-  { name: "companies", to: { name: "Companies" } },
+  { name: "Companies", to: { name: "Companies" } },
 ];
 
 export default {

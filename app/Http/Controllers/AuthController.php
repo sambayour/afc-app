@@ -15,7 +15,7 @@ class AuthController extends Controller
         $data = $request->validate([
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'email' => 'required|email|string|unique:users,email',
+            'email' => 'required|email:dns,rfc|unique:users',
             'phone_number' => 'string',
             'country_id' => 'string',
             'password' => [
@@ -45,7 +45,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email|string|exists:users,email',
+            'email' => 'required|email:dns,rfc|exists:users,email',
             'password' => [
                 'required',
             ],

@@ -4,9 +4,9 @@
     <template v-slot:header>
       <div class="flex justify-between items-center">
         <h1 class="text-3xl font-bold text-gray-900">All companies</h1>
-        <TButton color="green" :to="{ name: 'Login' }">
+        <TButton color="green" :to="{ name: 'Dashboard' }">
           <LoginIcon class="w-5 h-5" />
-          Login
+          User
         </TButton>
       </div>
     </template>

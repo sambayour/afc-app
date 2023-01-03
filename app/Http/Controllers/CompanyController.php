@@ -22,16 +22,6 @@ class CompanyController extends Controller
         return CompanyResource::collection(Company::where('user_id', Auth::user()->id)->latest()->paginate());
     }
 
-    function list(Request $request) {
-        $data = Company::latest()->all();
-        return response([
-            "data" => $data,
-            "status" => 'ok',
-            "success" => true,
-            "message" => "success",
-        ], 422); // return response()->json($data);
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -42,8 +32,8 @@ class CompanyController extends Controller
     {
         $validator = Validator::make($request->all(), [
             "name" => ['string', 'required'],
-            "email" => ['string', 'required'],
-            "phone_number" => ['string'],
+            "email" => ['string', 'required', 'email:dns,rfc', 'unique:companies'],
+            "phone_number" => ['string', 'unique:companies'],
             "service" => ['string'],
             "country_id" => ['string'],
             "description" => ['string'],

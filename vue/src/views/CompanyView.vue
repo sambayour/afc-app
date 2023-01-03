@@ -101,7 +101,6 @@ import { useRoute, useRouter } from "vue-router";
 import { SaveIcon, TrashIcon, ExternalLinkIcon } from '@heroicons/vue/solid'
 import store from "../store";
 import PageComponent from "../components/PageComponent.vue";
-import QuestionEditor from "../components/editor/QuestionEditor.vue";
 import TButton from "../components/core/TButton.vue";
 
 const router = useRouter();
