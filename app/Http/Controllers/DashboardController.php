@@ -21,8 +21,6 @@ class DashboardController extends Controller
         return [
             'totalCompanies' => $total,
             'latestSurvey' => $latest ? new CompanyResource($latest) : null,
-            'totalAnswers' => 0,
-            'latestAnswers' => 0
         ];
     }
 }
